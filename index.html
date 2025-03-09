@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .task { display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; padding: 8px; }
+        .task.completed { text-decoration: line-through; color: #aaa; }
+        .task-actions { display: flex; gap: 8px; }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+
+    <form id="task-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <textarea id="description" placeholder="Description"></textarea>
+        <input type="date" id="dueDate" required />
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="task-list"></div>
+
+    <script src="indexDB.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
